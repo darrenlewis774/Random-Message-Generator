@@ -1,13 +1,17 @@
 const firstName = ['Darren', 'John', 'Steve', 'Luke', 'Harry', 'Mike', 'Tony', 'Frank', 'Graham', 'Jim'];
 const secondName = ['Lewis', 'Smith', 'Edwards', 'Foster', 'Cooper', 'Evans', 'Fletcher', 'Wagner', 'Davis', 'Michell'];
-const car = ['Honda', 'Fiat', 'BMW', 'Ford', 'Volvo', 'Renault', 'Mercedes', 'Mini', 'Citroen', 'Vauxhall'];
+const carModel = ['Honda', 'Fiat', 'BMW', 'Ford', 'Volvo', 'Renault', 'Mercedes', 'Mini', 'Citroen', 'Vauxhall'];
 
-//Generate random number between 0 and
+//Generate random number between 0 and 9
 function randomNumberGenerate() {
     let randomNumber = Math.floor(Math.random() * 10);
     return randomNumber;
 }
 
-console.log(randomNumberGenerate());
+//Allocate generated random number to index variable 
+let firstRandomNumber = randomNumberGenerate();
+let secondRandomNumber = randomNumberGenerate();
+let thirdRandomNumber = randomNumberGenerate();
 
-//console.log(`${firstName} ${secondName} drives a ${car}.`);
+//Display string containing random array values
+console.log(`${firstName[firstRandomNumber]} ${secondName[secondRandomNumber]} drives a ${carModel[thirdRandomNumber]}.`);
